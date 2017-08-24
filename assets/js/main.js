@@ -62,4 +62,68 @@ $('#mes').blur(function(){
 	$('.titulo-2').hide();
 	$('.btn-regis').hide();
 	$('.contenedor-tarjeta').hide();
+
+	/**PARTE VANESSA PEREZ**/
+
+	/*funcionamiento del slider index1*/
+	$('.slider').slider();
+	
+	/*funcionamiento de generación del codigo index2*/
+	$('#btn2').hide();
+	
+	$("#btn1").click(function(){
+		var fono = $("#number").val();
+		var numero = /^[0-9]{9}$/;
+
+		if(!numero.test(fono)){
+			$("#mensaje").fadeIn("slow");           
+               return false;
+        }else{
+          $("#mensaje").fadeOut();
+            localStorage.setItem('phon', fono);
+        }       
+        if($('#test5').prop('checked')){
+        	$("#mensaje2").fadeOut();
+    		var test = true;
+    		localStorage.setItem('testing', test);
+		}else{
+			$("#mensaje2").fadeIn("slow"); 
+			test = false;         
+             return false;
+		}		
+
+		$("#btn1").hide();
+		$("#btn2").show();
+		return true;		
+	})	
+	$('#btn2').hide();
+	$("#btn2").click(function(){
+		var num2 = localStorage.getItem('phon');
+		console.log(num2);
+		var test2 = localStorage.getItem('testing');
+		console.log(num2);
+		var codigo2 = localStorage.getItem('codigo'); 
+		console.log(codigo2);
+
+		console.log("hello");
+
+		$.ajax({
+			url: '/api/registerNumber',
+			type: 'POST',
+			data: {'terms': test2, 'phone': num2}
+		})
+
+		.done(function(respuesta){
+			console.log('success');
+			alert(respuesta.data.code);	
+			var cod = (respuesta.data.code);
+			localStorage.setItem('codigo', cod);	
+		})	
+
+		.fail(function(){
+			console.log("error");
+			console.log(respuesta);		
+		})
+	})
+	/**FIN PARTE VANESSA PEREZ**/
 })
