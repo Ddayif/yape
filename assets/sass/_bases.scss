@@ -78,3 +78,116 @@
 	}
 }
 /*termina seccion 5-6*/
+
+/*pantalla 7 */
+.fondo{
+	background-color: #451e36;	
+}
+#tuerca{
+		float: right;
+		width: 50px;
+		height: 50px;
+		margin-top: 5%;
+		margin-right: 5%;
+	}
+
+#happy-face{
+	margin-left: 37%;
+	margin-top: 15%;
+	width: 250px;
+}
+
+.hola{
+	color: white;
+	text-align: center;
+	font-weight: bold;
+}
+
+.eye2{
+	display: inline-block;
+	color: #00c3a3;	
+	width: 35px;
+	height: 35px; 
+	margin-left: 30%;
+}
+.saldo{
+	display: inline-block;
+	font-size: 40px;
+	margin-left: 10px;
+	margin-bottom: 5%;
+	text-align: center;
+	color: #00c3a3;
+}
+
+.fondo2{
+	background-color: #38052a;
+	margin-top: -30px;
+	height: 65vh;
+}
+
+.movimiento{
+	color: white;
+	font-size: 35px;
+	display: inline-block;
+	margin-left: 2%;
+}
+
+#arrow{
+	width: 50px;
+	height: 50px;
+	float: right;
+	margin-top: 1%;
+	margin-right: 2%;
+}
+
+#icon{
+	float: left;
+	margin-top: 3%;
+	margin-left: 4%;
+	display: inline-block;
+	width: 250px;
+	height: 250px;
+}
+
+#text-icon{
+	color: white;
+	font-size: 40px;
+	display: inline-block;
+	margin-top: 8%;
+	margin-left: 4%;
+}
+
+#send{
+	width: 150px;
+	height: 150px;
+	float: left;
+	margin-top: 30%;
+	margin-left: 20%;
+	
+}
+
+#text-enviar{
+	color: white;
+	text-align: left;
+	font-size: 25px;
+	margin-top: 32px;
+	margin-left: 20%;
+
+}
+
+#code{
+	width: 150px;
+	height: 150px;
+	float: right;
+	margin-top: 30%;
+	margin-right: 20%;
+}
+
+#text-recibir{
+	color: white;
+	text-align: right;
+	font-size: 25px;
+	margin-top: -38px;
+	margin-right: 20%;
+}
+
